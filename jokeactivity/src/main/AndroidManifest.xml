@@ -8,10 +8,7 @@
         android:supportsRtl="true">
         <activity android:name=".JokeActivity"
             android:label="@string/joke_title">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
     </application>
 

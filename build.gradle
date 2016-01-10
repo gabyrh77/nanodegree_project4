@@ -17,3 +17,14 @@ allprojects {
         jcenter()
     }
 }
+
+task testTask(dependsOn: [':backend:appengineRun', ':app:assembleFreeDebugAndroidTest', ':app:assemblePaidDebugAndroidTest']){
+    project(":backend").afterEvaluate { backend ->
+        backend.extensions.appengine.daemon = true
+    }
+    doLast{
+         println "Running tests..."
+    }
+
+}
+testTask.finalizedBy ":backend:appengineStop"
