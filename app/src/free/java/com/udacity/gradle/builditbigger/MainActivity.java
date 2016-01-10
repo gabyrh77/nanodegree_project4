@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements EndpointTask.Endp
             // get test ads on a physical device. e.g.
             // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device."
             AdRequest adRequest = new AdRequest.Builder()
-                    .addTestDevice("1CC9A201966C678EF8DE1A426027F3A9")
+                    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                     .build();
             mInterstitialAd.loadAd(adRequest);
         }
